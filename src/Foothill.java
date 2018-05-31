@@ -34,7 +34,7 @@ public class Foothill
 
    public static void main(String[] args)
    {
-      final int[] ARRAY_SIZE = {10000, 50000, 75000, 100000, 150000, 200000};
+      final int[] ARRAY_SIZE = {10000, 50000, 100000, 150000, 200000, 500000};
 
       int[] gapArray = {1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024,
               2048, 4096, 8192, 16384, 32768, 65536, 131072, 262144, 524288,
@@ -103,7 +103,7 @@ public class Foothill
       for (int item : ARRAY_SIZE)
       {
          System.out.println("\nArray size: " + item);
-         sequencesRun(item, gapArray, sedgewickArray2, hibbardArray);
+         sequencesRun(item, gapArray, sedgewickArray3, hibbardArray);
       }
    }
 
@@ -166,7 +166,7 @@ public class Foothill
          System.out.println(String.format("sedgewick # %6d: %7d ", k, arrayOfInts3[k]));
          System.out.println(String.format("hibbard   # %6d: %7d \n", k, arrayOfInts4[k]));
       }
-      -------------------------------------- */
+      /*-------------------------------------- */
    }
 }
 
@@ -191,40 +191,41 @@ Sedgwick gap sequence 3(no math.pow calls)
 Hibbard gap sequence
 1, 3, 7, 15, 31, 63, 127, 255, 511, 1023, 2047, 4095, 8191, 16383, 32767, 65535, 131071, 262143, 524287, 1048575, 2097151, 4194303, 8388607, 16777215, 33554431, 67108863,
 
+
 Array size: 10000
-Elapsed Time:   0.0142 seconds. Shell's implied gap sequence
-Elapsed Time:   0.0383 seconds. Shell's explicit gap sequence
-Elapsed Time:    0.026 seconds. Sedgewick's gap sequence
-Elapsed Time:   0.0039 seconds. Hibbard's gap sequence
+Elapsed Time:    0.017 seconds. Shell's implied gap sequence
+Elapsed Time:   0.0229 seconds. Shell's explicit gap sequence
+Elapsed Time:   0.0125 seconds. Sedgewick's gap sequence
+Elapsed Time:   0.0222 seconds. Hibbard's gap sequence
 
 Array size: 50000
-Elapsed Time:   0.0729 seconds. Shell's implied gap sequence
-Elapsed Time:   0.1405 seconds. Shell's explicit gap sequence
-Elapsed Time:   0.0971 seconds. Sedgewick's gap sequence
-Elapsed Time:   0.0787 seconds. Hibbard's gap sequence
-
-Array size: 75000
-Elapsed Time:   0.1019 seconds. Shell's implied gap sequence
-Elapsed Time:   0.1704 seconds. Shell's explicit gap sequence
-Elapsed Time:   0.0547 seconds. Sedgewick's gap sequence
-Elapsed Time:    0.073 seconds. Hibbard's gap sequence
+Elapsed Time:   0.0748 seconds. Shell's implied gap sequence
+Elapsed Time:   0.1246 seconds. Shell's explicit gap sequence
+Elapsed Time:    0.089 seconds. Sedgewick's gap sequence
+Elapsed Time:   0.1178 seconds. Hibbard's gap sequence
 
 Array size: 100000
-Elapsed Time:    0.233 seconds. Shell's implied gap sequence
-Elapsed Time:   0.3927 seconds. Shell's explicit gap sequence
-Elapsed Time:     0.11 seconds. Sedgewick's gap sequence
-Elapsed Time:   0.1308 seconds. Hibbard's gap sequence
+Elapsed Time:   0.1553 seconds. Shell's implied gap sequence
+Elapsed Time:   0.2919 seconds. Shell's explicit gap sequence
+Elapsed Time:   0.1221 seconds. Sedgewick's gap sequence
+Elapsed Time:   0.2103 seconds. Hibbard's gap sequence
 
 Array size: 150000
-Elapsed Time:   0.1782 seconds. Shell's implied gap sequence
-Elapsed Time:   0.4671 seconds. Shell's explicit gap sequence
-Elapsed Time:   0.1379 seconds. Sedgewick's gap sequence
-Elapsed Time:   0.1696 seconds. Hibbard's gap sequence
+Elapsed Time:   0.2439 seconds. Shell's implied gap sequence
+Elapsed Time:   0.4357 seconds. Shell's explicit gap sequence
+Elapsed Time:   0.1176 seconds. Sedgewick's gap sequence
+Elapsed Time:   0.1567 seconds. Hibbard's gap sequence
 
 Array size: 200000
-Elapsed Time:   0.2553 seconds. Shell's implied gap sequence
-Elapsed Time:    0.868 seconds. Shell's explicit gap sequence
-Elapsed Time:    0.188 seconds. Sedgewick's gap sequence
-Elapsed Time:     0.24 seconds. Hibbard's gap sequence
+Elapsed Time:    0.237 seconds. Shell's implied gap sequence
+Elapsed Time:   0.7325 seconds. Shell's explicit gap sequence
+Elapsed Time:   0.1887 seconds. Sedgewick's gap sequence
+Elapsed Time:   0.2476 seconds. Hibbard's gap sequence
+
+Array size: 500000
+Elapsed Time:   0.7736 seconds. Shell's implied gap sequence
+Elapsed Time:   2.6285 seconds. Shell's explicit gap sequence
+Elapsed Time:   0.5736 seconds. Sedgewick's gap sequence
+Elapsed Time:   0.7385 seconds. Hibbard's gap sequence
 
  */
